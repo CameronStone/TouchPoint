@@ -1,0 +1,45 @@
+h1
+{
+    text-align: center;
+    font-weight: bold;
+    font-style: oblique;
+    font-family: Serif;
+    color: white;
+}
+#startbutton
+{
+    color: white;
+    text-align: center;
+}
+
+form
+{
+    text-align: center;
+}
+
+button
+{
+    display: inline-block;
+}
+
+.jumbotron
+{
+    background-color: #228CFF;
+}
+
+.table_padding
+{
+    padding: 0px 100px 0px 100px;
+
+}
+
+#enter_hours
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+.table table-striped
+{
+    color: white;
+}

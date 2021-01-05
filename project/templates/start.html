@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Friends & Rankings
+{% endblock %}
+
+
+{% block main %}
+    <div>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h3><u>Your friends</u></h3>
+            <div>- Assign each friend a priority (1 highest and 5 lowest)</div>
+            <div>- Type in their name</div>
+            <div>- Select things you both have in (college, extracurricular, concentration)</div>
+            <div>- Continue adding as many friends as you'd like</div>
+            <div>- Once you're done, press enter!</div>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <form action="/start" method="POST"> <!-- Execute this after the user pushes submit -->
+            <select name="priority" placeholder="Priority">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <input name="name" placeholder="Name" type="text">
+                <strong>
+                   <input type="checkbox" id="col" name="col">
+                   <label for="col"> {{PROFILE.college}} </label>
+
+                   <input type="checkbox" id="ext" name="ext">
+                   <label for="ext"> {{PROFILE.extracurricular}} </label>
+
+                   <input type="checkbox" id="con" name="con">
+                   <label for="con"> {{PROFILE.concentration}} </label>
+
+                   <input type="submit" value="Add">
+                </strong>
+        </form>
+    </div>
+
+    <div class="table_padding">
+
+        <table class="table table-striped">
+            <thead style="font-weight: bold">
+                <tr>
+                    <th>Name</th>
+                    <th>Priority</th>
+                    <th>College</th>
+                    <th>Extracurricular</th>
+                    <th>Concentration</th>
+                </tr>
+            </thead>
+            <!--<tbody style="text-align: center">-->
+            {% for row in INFO %}
+                <tr>
+                    <td>{{row['name']}}</td>
+                    <td>{{row['priority']}}</td>
+                    <td>{{row['college']}}</td>
+                    <td>{{row['extracurricular']}}</td>
+                    <td>{{row['concentration']}}</td>
+
+                </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+    <p>
+    <!-- citation:Teaching fellow gave me this website to help with the start button and html. I used this throughout my code https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link -->
+    <form method="GET" action="/data">
+        <button type ="submit">Enter</button>
+    </form>
+    </p>
+{% endblock %}
+

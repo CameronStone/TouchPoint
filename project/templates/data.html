@@ -1,0 +1,56 @@
+{% extends "layout.html"%}
+
+{% block title %}
+    Adjusted priorities
+{% endblock %}
+
+{% block main %}
+
+    <div>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h3><u>TouchPoint Table</u></h3>
+            <div>
+                This table decreases priority for friends who have existing common overlaps of interaction with you.
+                It is our belief that if you go to the same college as your friend you likely speak to them more often due to social events (housing day, study breaks, etc).
+                Therefore, you do not have to find as much time in your schedule to reach out separately.
+                Those friends that you share less common overlaps with should come up higher on your TouchPoint list because you likely do not speak to them as regularly in your schedule!
+            </div>
+
+            <div><b>At the bottom, enter the total number of hours per week that you want to spend connecting with friends.</b></div>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+        <!--table class="w3-table w3-striped w3-border">-->
+        <div class="table_padding">
+            <table class="table table-striped">
+                <thead style="font-weight: bold">
+                    <tr>
+                        <th>Name</th>
+                        <th>TouchPoint Index</th>
+
+                    </tr>
+                </thead>
+                {% for row in INFO %}
+                <tr>
+                    <td>{{row['name']}}</td>
+                    <td>{{row['tp_index']}}</td>
+
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <br>
+
+        <div id="enter_hours">
+            <b>Desired # of hours spent connecting in the week (must be a whole number):</b>
+            <form method="POST" action="/time">
+                <input name="time" placeholder="hours" type="number" min="0" max="168">
+                <!--<button class="btn btn-primary btn-sm" type="submit">Enter</button>-->
+                <button type="submit">Enter</button>
+            </form>
+        </div>
+
+    </div>
+{% endblock %}

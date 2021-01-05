@@ -1,0 +1,43 @@
+{% extends "layout.html"%}
+
+{% block title %}
+    Adjusted priorities
+{% endblock %}
+
+{% block main %}
+<div>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <h3><u>TouchPoint-assigned Time</u></h3>
+        <div><b>In a given week, if you spend {{TIME}} hours connecting with friends, this is the distribution of your time that would allow the most friends to hear from you.</b></div>
+        <div>It does not represent which friends are your favorite. Rather, it identifies who in your life it is most important to go out of your way to connect with!</div>
+        <div>Feel free to screenshot and use for time management.</div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+    <!--table class="w3-table w3-striped w3-border">-->
+
+    <div class="table_padding">
+        <table class="table table-striped">
+            <thead style="font-weight: bold">
+                <br>
+                <tr>
+                    <th>Name</th>
+                    <th>Minutes</th>
+
+                </tr>
+            </thead>
+            {% for row in INFO %}
+            <tr>
+                <td>{{row['name']}}</td>
+                <td>{{row['time']}}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <br>
+
+</div>
+{% endblock %}

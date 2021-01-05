@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- citation: I used https://www.w3schools.com/cssref/default.asp to help me with syntax throughout my code.-->
+<!-- citation: https://www.codegrepper.com/code-examples/html/how+to+bold+text+css+inline. A teaching fellow, in tutorial, gave me this website that had the syntax for the "<strong> </strong>" to bold a part of my text before the summaries on each page.-->
+<!-- citation: I got the jumbotron idea from the distribution code in my previous lab-->
+<html lang="en">
+    <style>
+        button /* Teaching fellow gave me this website to help with button customization https://stackoverflow.com/questions/15300234/how-can-i-horizontally-center-a-button-element-in-a-div-element/15300266 */
+        {
+            margin: 0 auto;
+            display: block;
+            height: 50px;
+            width: 100px;
+        }
+        button:hover {
+            background-color: green;
+            color: white;
+        }
+
+    </style>
+
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> <!-- The bootstrap was taken from the https://cs50.harvard.edu/college/2020/fall/psets/8/homepage/-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>TouchPoint:</title>
+    </head>
+    <div class="jumbotron">
+        <h1>TouchPoint</h1>
+        <div class="p-3 mb-2 bg-white text-white"></div> <!--Check to see where we add the </div> for this in the next iteration-->
+        <!--citation: https://getbootstrap.com/docs/4.5/utilities/colors/ I used this bootstrap website to learn how to put a background color for all the html's.-->
+
+    <!--Citation: https://getbootstrap.com/docs/4.5/components/alerts/ This alert code came from the bootstrap website, and it is used throughout all my pages. This is a javascript action, and it is a javascript implementation. This is an alert that shows up on every page and informs the user which page that they clicked. The user can also exit the alert. -->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <div><b>Welcome to TouchPoint: a time management platform which helps users keep up with friends from around the world.</b></div>
+        <div>During times like these in 2020, it can be tough to keep track of which friends you need to catch up with! This website has programmed formulas to help you keep track of how much time you should be spending talking to friends each week during your busy life!</div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <p>
+
+    <body>
+        <!--<form action="/start"><button type ="submit">Start</button></form> DONT NEED THIS, so it FORCES SOMEONE TO HAVE AN ACCOUNT-->
+        <!--https://stackoverflow.com/questions/5214893/right-align-an-image-using-css-html-->
+        <form method = "POST" action ="/login">
+            <div>
+                <input type="text" name="username" placeholder="Username">
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="Password">
+            </div>
+
+            <button type ="submit">Login</button>
+        </form>
+        <form method = "get" action = "/register">
+            <div>
+                <br><br>
+                <div><b>Don't have an account?</b></div>
+                <br>
+                <button type ="register">Register here</a>
+            </div>
+        </form>
+        <img src="static/Cam Text.JPG" alt="Touch Point" width="250" height="541" style="float: right;">
+        <img src="static/Kevens, Dan, and Cam.jpeg" alt="Facetime" width="250" height="541">
+        <!-- Teaching fellow gave me this link in tutorial to help with adjustment of image. https://stackoverflow.com/questions/5214893/right-align-an-image-using-css-html-->
+        <!-- A TF in tutorial gave me this website to help me learn how to center a button. https://coder-coder.com/how-to-center-button-with-html-css/ -->
+    </body>
+<html>

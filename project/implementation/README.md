@@ -1,0 +1,15 @@
+User manual:
+
+View Youtube demonstration of TouchPoint at: https://youtu.be/fujWfky297o
+
+This is the user manual for TouchPoint: a time management tool that helps you keep up with friends! The process to compile the code is the same as usual for a Flask web application. The code is compiled by using cd project to get into the project tab then using flask run to create the website. You then click the website link and visit the website. The website is compatible with safari and google chrome and the other main web browsers.
+
+Within the terminal, enter “flask run”. Then, TouchPoint will be accessible at this link: https://0a4af9d8-f12a-451b-b91d-47f6720ba74e-ide.cs50.xyz:8080
+
+Once on the website, it prompts the user to either login or register into the website. It also has some nice images on each side of the login and register feature. When you register, you need to fill in a college, extracurricular, and concentration. In order to get the most out of the website application, the user must enter something in each category. If a category does not apply, for example if the person does not go to college, they can enter “No College”. Once you are registered or logged in to TouchPoint, there is a javascript alert that has instructions on each page.
+
+“Your Friends” allows you to associate your friends with your college, extracurricular, or concentration. You can choose to select the boxes, which includes a college name, extra-curricular, or concentration that your friend has in common with you . You also select your desired priority to communicate with that friend by selecting a number 1-5 beside their name. After this process, you click “add” to add them to your database. After adding them to your database, you can keep adding friends! Once you have as many as you desire, you then click enter.
+
+“Generate your results” is the next page. This page allows you to see the TouchPoint index of your friend inputs. The TouchPoint index ranks how high their priority should be according to the algorithm. It is based on how many of the selectors (such as college, extracurricular, and concentration) that you have in common with each other. For example, a friend with nothing in common would be higher on the list than a friend with everything in common. This is because normally you communicate less with a person who you don’t interact with in those selectors. On this page, you can then enter the number of hours that you would want to spread amongst your friends.
+
+The final page demonstrates an algorithm that spreads your time according to the amount of hours that you set. It helps you identify the friends that it is most important for you to reach out to outside of your normal schedule and how much time each friend should receive to optimize your personal time you spend connecting. You can always go back to the other pages by clicking the hyper links in the white bar and do things such as adding more friends or regenerating your results. This is the power of TouchPoint!
